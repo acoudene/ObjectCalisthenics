@@ -2,5 +2,7 @@
 
 public class PremiumCustomer : CustomerBase
 {
-  public override string GetAccess() => "premium";  
+  public const string Premium = "premium";
+
+  public override string GetAccess() => Premium;  
 }

@@ -21,9 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_3_LSP\" />
-    <Folder Include="_4_ISP\" />
-    <Folder Include="_5_DIP\" />
+    <Folder Include="_4_ISP\BadExample\" />
+    <Folder Include="_5_DIP\BadExample\" />
   </ItemGroup>
 
 </Project>

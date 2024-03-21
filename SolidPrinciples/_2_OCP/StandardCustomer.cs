@@ -2,5 +2,7 @@
 
 public class StandardCustomer : CustomerBase
 {
-  public override string GetAccess() => "standard";
+  public const string Standard = "standard";
+
+  public override string GetAccess() => Standard;
 }
