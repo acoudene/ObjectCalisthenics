@@ -11,7 +11,7 @@ L'objectif de ce document est de vous présenter différentes approches pour cod
 # Thématiques visées
 
 Nous verrons les thématiques suivantes qui peuvent se recouper :
-- Object Calisthenic
+- Object Calisthenics
 - Loi de Demeter
 - Approche "Tell don't ask"
 
