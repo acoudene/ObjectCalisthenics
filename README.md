@@ -24,122 +24,21 @@ Les objectifs des principes SOLID sont de se définir un cadre permettant d'assu
 
 Chaque module, chaque classe ou chaque structure ne doit avoir qu'une seule et unique responsabilité.
 
-Le mal :
-
-```
-public class Customer
-{
-   public string Name { get; init; }
-
-   // This attribute should not be managed internally by a customer   
-   private readonly int _capital;
-
-   public Customer(string name, int capital)
-   {
-      Name = name ?? throw new ArgumentNullException(nameof(name));
-      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
-   }
-
-   public void EarnMoney(uint money) => _capital += money;
-   public void SpendMoney(uint money) => _capital -= money;
-   public bool CanBuy(int price) => price <= Capital;
-        
-}
-```
-
-Une solution :
-
-```
-public class Customer
-{
-   public string Name { get; init; }
-
-   private readonly FinancialService _financialService;
-
-   public Customer(string name, FinancialService financialService)
-   {
-      Name = name ?? throw new ArgumentNullException(nameof(name));
-      _financialService = financialService ?? throw new ArgumentNullException(nameof(financialService));
-   }
-
-   public void EarnMoney(uint money) => _financialService.EarnMoney(money);
-   public void SpendMoney(uint money) => _financialService.SpendMoney(money);
-   public bool CanBuy(int price) => _financialService.CanBuy(money);
-}
-
-public class FinancialService
-{
-   private readonly int _capital;
-
-   public Customer(int capital)
-   {
-      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
-   }
-
-   public void EarnMoney(uint money) => _capital += money;
-   public void SpendMoney(uint money) => _capital -= money;
-   public bool CanBuy(int price) => price <= Capital;
-}
-```
-
 ## O-pen Closed Principle
 
-```
-public class Customer { ... }
-public class Vip { ... }
-public class Star { ... }
-
-public class ShowOrganization
-{
-  // Here, we will have to change the code each time we get a new kind of person
-  // We will break Closed principle
- 
-  public void AllocateSeat(object person)
-  {
-    if ( person is Customer )
-    {
-      // Allocate a standard place
-    }
-    elsif ( person is Vip )
-    {
-      // Allocate a best place
-    }
-    elsif ( person is Star )
-    {
-       // Allocate artist place
-    }
-    else
-    {
-      return;
-    } 
-  }
-}
-```
-
-```
-public class Person { ... }
-public class Customer : Person { ... }
-public class Vip : Customer { ... }
-public class Star : Person { ... }
-
-public class ShowOrganization
-{ 
-  public void AllocateSeat(Person person)
-  {
-      var access = person.GetAccess();
-      acccess switch
-     {
-  
-  }
-}
-```
+Tout code ou classe ne devrait jamais être modifiés pour une évolution (sauf bug), mais devrait être suffisamment ouverte aux évolutions futures. 
 
 ## L-iskov Substitution Principle
 
+Toute nouvelle classe dérivée ne doit pas changer le comportement induit par sa classe de base et peut donc se substituer à sa classe de base.
+
 ## I-nterface Segregation Principle
+
+Une classe implémentant une interface doit avoir l'utilité de toutes les éléments définis dans cette même interface.
 
 ## D-ependency Inversion Principle
 
+Il s'agit d'assurer un couplage faible entre le contrat d'utilisation d'un objet agrégé avec l'implémentation de ce même objet agrégé afin de pouvoir l'injecter. 
 
 # Object Calisthenics
 
