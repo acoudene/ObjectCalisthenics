@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="1_OneLevelIndentation\" />
+    <Folder Include="2_NoElse\" />
+    <Folder Include="3_PrimitiveAsObject\" />
+    <Folder Include="4_FirstClassCollections\" />
+    <Folder Include="5_LawOfDemeter_NoMoreThanOneDot\" />
+    <Folder Include="6_NoAbbreviation\" />
+    <Folder Include="7_SmallModules\" />
+    <Folder Include="8_FiveInstanceVariablesMax\" />
+    <Folder Include="9_TellDontAsk_NoGetterSetter\" />
+  </ItemGroup>
+
+</Project>
