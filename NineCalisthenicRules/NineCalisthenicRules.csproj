@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_1_OneLevelIndentation\" />
     <Folder Include="_2_NoElse\" />
     <Folder Include="_3_PrimitiveAsObject\" />
     <Folder Include="_4_FirstClassCollections\" />
