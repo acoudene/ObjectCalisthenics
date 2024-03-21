@@ -1,21 +1,21 @@
-namespace NineCalisthenicRules._4_FirstClassCollections.BadExample;
+namespace NineCalisthenicRules._9_TellDontAsk_NoGetterSetter;
 
-public class GivenBadCollectionUsage
+public class GivenTellDontAskPrinciple
 {
   [Fact]
-  public void WhenUsingItThenItsABadPractice()
+  public void WhenUsingItThenItsAGoodPractice()
   {
     // Arrange
     var showRoomSeller = new ShowRoomSeller();
 
-    // Act
+    // Act    
     showRoomSeller.BookASpectacle("LuffyReservation");
     showRoomSeller.BookASpectacle("NamiReservation");
     showRoomSeller.BookASpectacle("BoaReservation");
     showRoomSeller.BookASpectacle("KaidoReservation");
 
     // Assert
-    Assert.Equal(ShowRoomSeller.ClosedReservation, showRoomSeller.PromoteASpectacle());
+    Assert.True(showRoomSeller.IsFull());
     Assert.True(showRoomSeller.Capital == 40000);
   }
 }

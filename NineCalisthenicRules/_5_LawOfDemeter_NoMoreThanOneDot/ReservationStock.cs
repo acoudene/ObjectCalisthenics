@@ -1,8 +1,8 @@
-﻿namespace NineCalisthenicRules._4_FirstClassCollections;
+﻿namespace NineCalisthenicRules._5_LawOfDemeter_NoMoreThanOneDot;
 
 public class ReservationStock
 {
-  public const int MaxReservation = 4;
+  private const int MaxReservation = 4;
   private readonly List<string> _bookedSpectacles = new List<string>();
 
   public void BookASpectacle(string bookingName)

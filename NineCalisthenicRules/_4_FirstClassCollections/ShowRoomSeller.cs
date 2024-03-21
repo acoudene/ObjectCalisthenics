@@ -7,7 +7,8 @@ public class ShowRoomSeller
   public const string OpenReservation = "OpenReservation";
   public const string ClosedReservation = "ClosedReservation";
 
-  public int _capital = 0;
+  private int _capital = 0;
+  public int Capital { get => _capital; }
 
   public string PromoteASpectacle()
   {

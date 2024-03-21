@@ -1,4 +1,4 @@
-﻿namespace NineCalisthenicRules._4_FirstClassCollections;
+﻿namespace NineCalisthenicRules._9_TellDontAsk_NoGetterSetter.BadExample;
 
 public class ReservationStock
 {

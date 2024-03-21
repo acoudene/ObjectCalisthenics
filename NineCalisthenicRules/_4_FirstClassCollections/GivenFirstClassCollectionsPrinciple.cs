@@ -3,7 +3,7 @@ namespace NineCalisthenicRules._4_FirstClassCollections;
 public class GivenFirstClassCollectionsPrinciple
 {
   [Fact]
-  public void WhenUsingItThenItsABadPractice()
+  public void WhenUsingItThenItsAGoodPractice()
   {
     // Arrange
     var showRoomSeller = new ShowRoomSeller();
@@ -16,5 +16,6 @@ public class GivenFirstClassCollectionsPrinciple
 
     // Assert
     Assert.Equal(ShowRoomSeller.ClosedReservation, showRoomSeller.PromoteASpectacle());
+    Assert.True(showRoomSeller.Capital == 40000);
   }
 }

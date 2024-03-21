@@ -2,13 +2,14 @@
 
 public class ShowRoomSeller
 {
-  private const int maxReservation = 4;
+  public const int MaxReservation = 4;
   private readonly List<string> _bookedSpectacles = new List<string>();
 
   public const string OpenReservation = "OpenReservation";
   public const string ClosedReservation = "ClosedReservation";
 
-  public int _capital = 0;
+  private int _capital = 0;
+  public int Capital { get => _capital; }
 
   public string PromoteASpectacle()
   {
@@ -27,5 +28,5 @@ public class ShowRoomSeller
     _capital += 10000;
   }
 
-  public bool IsFull() => _bookedSpectacles.Count >= maxReservation;
+  public bool IsFull() => _bookedSpectacles.Count >= MaxReservation;
 }

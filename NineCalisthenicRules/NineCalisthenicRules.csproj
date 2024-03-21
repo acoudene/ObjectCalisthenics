@@ -21,11 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_5_LawOfDemeter_NoMoreThanOneDot\" />
-    <Folder Include="_6_NoAbbreviation\" />
-    <Folder Include="_7_SmallModules\" />
-    <Folder Include="_8_FiveInstanceVariablesMax\" />
-    <Folder Include="_9_TellDontAsk_NoGetterSetter\" />
+    <Folder Include="_6_NoAbbreviation\BadExample\" />
+    <Folder Include="_7_SmallModules\BadExample\" />
+    <Folder Include="_8_FiveInstanceVariablesMax\BadExample\" />
   </ItemGroup>
 
 </Project>
