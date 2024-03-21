@@ -31,6 +31,7 @@ public class Customer
 {
    public string Name { get; init; }
 
+   // This attribute should not be managed internally by a customer   
    private readonly int _capital;
 
    public Customer(string name, int capital)
@@ -81,8 +82,57 @@ public class FinancialService
 }
 ```
 
-
 ## O-pen Closed Principle
+
+```
+public class Customer { ... }
+public class Vip { ... }
+public class Star { ... }
+
+public class ShowOrganization
+{
+  // Here, we will have to change the code each time we get a new kind of person
+  // We will break Closed principle
+ 
+  public void AllocateSeat(object person)
+  {
+    if ( person is Customer )
+    {
+      // Allocate a standard place
+    }
+    elsif ( person is Vip )
+    {
+      // Allocate a best place
+    }
+    elsif ( person is Star )
+    {
+       // Allocate artist place
+    }
+    else
+    {
+      return;
+    } 
+  }
+}
+```
+
+```
+public class Person { ... }
+public class Customer : Person { ... }
+public class Vip : Customer { ... }
+public class Star : Person { ... }
+
+public class ShowOrganization
+{ 
+  public void AllocateSeat(Person person)
+  {
+      var access = person.GetAccess();
+      acccess switch
+     {
+  
+  }
+}
+```
 
 ## L-iskov Substitution Principle
 
