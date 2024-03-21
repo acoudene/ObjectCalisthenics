@@ -79,7 +79,7 @@ Lien avec la Loi de Demeter
 
 ## Ne pas utiliser d'abrévation
 
-## Garder les entités petites
+## Garder les modules ou les entités petites
 
 Les règles :
 - Maximum 10 méthodes par classe
