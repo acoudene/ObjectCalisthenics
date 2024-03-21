@@ -80,6 +80,8 @@ L'image souvent donné lorsqu'on utilise plusieurs points par ligne : "Imaginons
 
 ## Ne pas utiliser d'abrévation
 
+Il ne faut pas utiliser d'abrévation pour la lisibilité. Cependant, si on constate que les noms non abrégés de nos méthodes ou classes sont excessivement longs c'est sûrement parce qu'on ne respecte pas le principe SRP de SOLID...
+
 ## Garder les modules ou les entités petites
 
 Les règles :
