@@ -21,11 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="2_OCP\" />
-    <Folder Include="1_SRP\" />
-    <Folder Include="3_LSP\" />
-    <Folder Include="4_ISP\" />
-    <Folder Include="5_DIP\" />
+    <Folder Include="_3_LSP\" />
+    <Folder Include="_4_ISP\" />
+    <Folder Include="_5_DIP\" />
   </ItemGroup>
 
 </Project>

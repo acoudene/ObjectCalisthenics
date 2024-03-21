@@ -21,15 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="1_OneLevelIndentation\" />
-    <Folder Include="2_NoElse\" />
-    <Folder Include="3_PrimitiveAsObject\" />
-    <Folder Include="4_FirstClassCollections\" />
-    <Folder Include="5_LawOfDemeter_NoMoreThanOneDot\" />
-    <Folder Include="6_NoAbbreviation\" />
-    <Folder Include="7_SmallModules\" />
-    <Folder Include="8_FiveInstanceVariablesMax\" />
-    <Folder Include="9_TellDontAsk_NoGetterSetter\" />
+    <Folder Include="_1_OneLevelIndentation\" />
+    <Folder Include="_2_NoElse\" />
+    <Folder Include="_3_PrimitiveAsObject\" />
+    <Folder Include="_4_FirstClassCollections\" />
+    <Folder Include="_5_LawOfDemeter_NoMoreThanOneDot\" />
+    <Folder Include="_6_NoAbbreviation\" />
+    <Folder Include="_7_SmallModules\" />
+    <Folder Include="_8_FiveInstanceVariablesMax\" />
+    <Folder Include="_9_TellDontAsk_NoGetterSetter\" />
   </ItemGroup>
 
 </Project>
