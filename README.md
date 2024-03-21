@@ -29,12 +29,13 @@ Le mal :
 ```
 public class Customer
 {
-   public string Name { get; set; }
+   public string Name { get; init; }
 
    private readonly int _capital;
 
-   public Customer(int capital)
+   public Customer(string name, int capital)
    {
+      Name = name ?? throw new ArgumentNullException(nameof(name));
       _capital = capital ?? throw new ArgumentNullException(nameof(capital));
    }
 
@@ -50,12 +51,15 @@ Une solution :
 ```
 public class Customer
 {
-   public string Name { get; set; }
+   public string Name { get; init; }
 
    private readonly FinancialService _financialService;
 
-   public Customer(FinancialService financialService) => _financialService = financialService ?? throw new ArgumentNullException(nameof(financialService));
-
+   public Customer(string name, FinancialService financialService)
+   {
+      Name = name ?? throw new ArgumentNullException(nameof(name));
+      _financialService = financialService ?? throw new ArgumentNullException(nameof(financialService));
+   }
 
    public void EarnMoney(uint money) => _financialService.EarnMoney(money);
    public void SpendMoney(uint money) => _financialService.SpendMoney(money);
