@@ -1,6 +1,7 @@
 # Object Calisthenics
 
-A repository to expose Object Calisthenics, Law of Demeter (LoW), "Tell don't ask" (TDA) approaches
+A repository to expose Object Calisthenics, Law of Demeter (LoW), "Tell don't ask" (TDA) approaches.
+See code to illustrate rules below.
 
 _(in french below...)_
 
