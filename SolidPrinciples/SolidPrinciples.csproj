@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_4_ISP\BadExample\" />
     <Folder Include="_5_DIP\BadExample\" />
   </ItemGroup>
 
