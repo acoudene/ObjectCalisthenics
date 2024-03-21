@@ -95,4 +95,4 @@ Il ne faut pas avoir plus de 5 variables d'instances pour une même classe ; cas
 
 ## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
 
-Lien approche "Tell don't ask"
+Ce point est très proche de la Loi de Demeter avec un seul point par ligne. Il ne peut être pas toujours possible d'interdire les Getter mais il faut toujours limiter voir interdire les Setter afin d'utiliser des méthodes dédiées pour ne pas désencapsuler l'objet.
