@@ -17,7 +17,7 @@ Nous verrons les thématiques suivantes qui peuvent se recouper :
 
 # Object Calisthenics
 
-9 règles régissent les Object Calisthenics :
+9 règles définissent les Object Calisthenics :
 1. Un seul niveau d'indentation par méthode
 2. Ne jamais utiliser le mot-clé "else" ou ses dérivés
 3. Garder les entités petites
