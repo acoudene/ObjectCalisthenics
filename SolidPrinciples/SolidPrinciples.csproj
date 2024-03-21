@@ -20,8 +20,4 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="_5_DIP\BadExample\" />
-  </ItemGroup>
-
 </Project>
