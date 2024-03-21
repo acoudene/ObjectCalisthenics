@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="_6_NoAbbreviation\BadExample\" />
     <Folder Include="_7_SmallModules\BadExample\" />
     <Folder Include="_8_FiveInstanceVariablesMax\BadExample\" />
   </ItemGroup>
