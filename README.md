@@ -84,12 +84,14 @@ Il ne faut pas utiliser d'abrévation pour la lisibilité. Cependant, si on cons
 
 ## Garder les modules ou les entités petites
 
-Les règles :
+Les règles à respecter :
 - Maximum 10 méthodes par classe
 - Maximum 50 lignes par classe
 - Maximum 10 classes par namespace
 
 ## Pas plus de 5 variables d'instances (attributs ou propriétés)
+
+Il ne faut pas avoir plus de 5 variables d'instances pour une même classe ; cas signifiant que l'on a sûrement mal découpé et qu'on n'a pas respecté le principe SRP de SOLID...
 
 ## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
 
