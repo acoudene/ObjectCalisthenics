@@ -18,7 +18,65 @@ Nous verrons les thématiques suivantes qui peuvent se recouper :
 
 # Rappels SOLID
 
+Les objectifs des principes SOLID sont de se définir un cadre permettant d'assurer une pérennité, une maintenabilité avec un côté industriel au développement logiciel.
+
 ## S-ingle Responsibility Principle
+
+Chaque module, chaque classe ou chaque structure ne doit avoir qu'une seule et unique responsabilité.
+
+Le mal :
+
+```
+public class Customer
+{
+   public string Name { get; set; }
+
+   private readonly int _capital;
+
+   public Customer(int capital)
+   {
+      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
+   }
+
+   public void EarnMoney(uint money) => _capital += money;
+   public void SpendMoney(uint money) => _capital -= money;
+   public bool CanBuy(int price) => price <= Capital;
+        
+}
+```
+
+Une solution :
+
+```
+public class Customer
+{
+   public string Name { get; set; }
+
+   private readonly FinancialService _financialService;
+
+   public Customer(FinancialService financialService) => _financialService = financialService ?? throw new ArgumentNullException(nameof(financialService));
+
+
+   public void EarnMoney(uint money) => _financialService.EarnMoney(money);
+   public void SpendMoney(uint money) => _financialService.SpendMoney(money);
+   public bool CanBuy(int price) => _financialService.CanBuy(money);
+}
+
+public class FinancialService
+{
+   private readonly int _capital;
+
+   public Customer(int capital)
+   {
+      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
+   }
+
+   public void EarnMoney(uint money) => _capital += money;
+   public void SpendMoney(uint money) => _capital -= money;
+   public bool CanBuy(int price) => price <= Capital;
+}
+```
+
 
 ## O-pen Closed Principle
 
