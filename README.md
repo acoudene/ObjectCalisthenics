@@ -11,9 +11,23 @@ L'objectif de ce document est de vous présenter différentes approches pour cod
 # Thématiques visées
 
 Nous verrons les thématiques suivantes qui peuvent se recouper :
+- Rappels SOLID
 - Object Calisthenics
 - Loi de Demeter
 - Approche "Tell don't ask"
+
+# Rappels SOLID
+
+## S-ingle Responsibility Principle
+
+## O-pen Closed Principle
+
+## L-iskov Substitution Principle
+
+## I-nterface Segregation Principle
+
+## D-ependency Inversion Principle
+
 
 # Object Calisthenics
 
