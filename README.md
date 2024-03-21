@@ -1,6 +1,7 @@
 # Object Calisthenics
 
-A repository to expose Object Calisthenics, Law of Demeter (LoW), "Tell don't ask" (TDA) approaches
+A repository to expose Object Calisthenics, Law of Demeter (LoW), "Tell don't ask" (TDA) approaches.
+See code to illustrate rules below.
 
 _(in french below...)_
 
@@ -24,164 +25,75 @@ Les objectifs des principes SOLID sont de se définir un cadre permettant d'assu
 
 Chaque module, chaque classe ou chaque structure ne doit avoir qu'une seule et unique responsabilité.
 
-Le mal :
-
-```
-public class Customer
-{
-   public string Name { get; init; }
-
-   // This attribute should not be managed internally by a customer   
-   private readonly int _capital;
-
-   public Customer(string name, int capital)
-   {
-      Name = name ?? throw new ArgumentNullException(nameof(name));
-      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
-   }
-
-   public void EarnMoney(uint money) => _capital += money;
-   public void SpendMoney(uint money) => _capital -= money;
-   public bool CanBuy(int price) => price <= Capital;
-        
-}
-```
-
-Une solution :
-
-```
-public class Customer
-{
-   public string Name { get; init; }
-
-   private readonly FinancialService _financialService;
-
-   public Customer(string name, FinancialService financialService)
-   {
-      Name = name ?? throw new ArgumentNullException(nameof(name));
-      _financialService = financialService ?? throw new ArgumentNullException(nameof(financialService));
-   }
-
-   public void EarnMoney(uint money) => _financialService.EarnMoney(money);
-   public void SpendMoney(uint money) => _financialService.SpendMoney(money);
-   public bool CanBuy(int price) => _financialService.CanBuy(money);
-}
-
-public class FinancialService
-{
-   private readonly int _capital;
-
-   public Customer(int capital)
-   {
-      _capital = capital ?? throw new ArgumentNullException(nameof(capital));
-   }
-
-   public void EarnMoney(uint money) => _capital += money;
-   public void SpendMoney(uint money) => _capital -= money;
-   public bool CanBuy(int price) => price <= Capital;
-}
-```
-
 ## O-pen Closed Principle
 
-```
-public class Customer { ... }
-public class Vip { ... }
-public class Star { ... }
-
-public class ShowOrganization
-{
-  // Here, we will have to change the code each time we get a new kind of person
-  // We will break Closed principle
- 
-  public void AllocateSeat(object person)
-  {
-    if ( person is Customer )
-    {
-      // Allocate a standard place
-    }
-    elsif ( person is Vip )
-    {
-      // Allocate a best place
-    }
-    elsif ( person is Star )
-    {
-       // Allocate artist place
-    }
-    else
-    {
-      return;
-    } 
-  }
-}
-```
-
-```
-public class Person { ... }
-public class Customer : Person { ... }
-public class Vip : Customer { ... }
-public class Star : Person { ... }
-
-public class ShowOrganization
-{ 
-  public void AllocateSeat(Person person)
-  {
-      var access = person.GetAccess();
-      acccess switch
-     {
-  
-  }
-}
-```
+Tout code ou classe ne devrait jamais être modifiés pour une évolution (sauf bug), mais devrait être suffisamment ouverte aux évolutions futures. 
 
 ## L-iskov Substitution Principle
 
+Toute nouvelle classe dérivée ne doit pas changer le comportement induit par sa classe de base et peut donc se substituer à sa classe de base.
+
 ## I-nterface Segregation Principle
+
+Une classe implémentant une interface doit avoir l'utilité de toutes les éléments définis dans cette même interface.
 
 ## D-ependency Inversion Principle
 
+Il s'agit d'assurer un couplage faible entre le contrat d'utilisation d'un objet agrégé avec l'implémentation de ce même objet agrégé afin de pouvoir l'injecter. 
 
 # Object Calisthenics
 
 9 règles définissent les Object Calisthenics :
 1. Un seul niveau d'indentation par méthode
 2. Ne jamais utiliser le mot-clé "else" ou ses dérivés
-3. Garder les entités petites
-4. Ne pas utiliser d'abrévation
-5. Encapsuler les types primitifs dans des objets
-6. First Class Collection
-7. Un seul point par ligne (sauf écriture fluide)
+3. Encapsuler les types primitifs dans des objets
+4. First Class Collection
+5. Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
+6. Ne pas utiliser d'abrévation
+7. Garder les modules ou les entités petites
 8. Pas plus de 5 variables d'instances (attributs ou propriétés)
-9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity)
+9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
    
 ## Un seul niveau d'indentation par méthode
 
+Ce principe améliore la lisibilité et permet d'avoir un code découpé et maintenable.
+
 ## Ne jamais utiliser le mot-clé "else" ou ses dérivés
 
-Quelques solutions :
-- Early Exit
-- Fail fast
+Ce principe permet d'éviter les alternatives compliquées, tout en maintenant la lisibilité avec une code nominal explicite à la fin.
+Quelques solutions pour ne plus avoir de "else" :
+- Early Exit (cas métier ou respect des préconditions métier)
+- Fail fast (exceptionsliés aux prérequis selon respect des préconditions)
 - Initialisation en amont
-
-## Garder les entités petites
-
-Les règles :
-- Maximum 10 méthodes par classe
-- Maximum 50 lignes par classe
-- Maximum 10 classes par namespace
-  
-## Ne pas utiliser d'abrévation
 
 ## Encapsuler les types primitifs dans des objets
 
+Il est toujours préférable d'utiliser un type personnalisé plutôt qu'une primitive trop ouverte.
+
 ## First Class Collection
 
-## Un seul point par ligne (sauf écriture fluide).
+Il est préférable d'utiliser une classe hôte pour héberger une collection plutôt que de la mélanger au milieu d'autres considérations métier d'un même objet.
 
-Lien avec la Loi de Demeter ou "Tell don't ask"
+## Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
+
+Il s'agit ici d'un lien avec la Loi de Demeter consistant à ne pas manipuler le contenu des objets ou désencapsuler depuis l'extérieur.
+L'image souvent donné lorsqu'on utilise plusieurs points par ligne : "Imaginons que pour payer le pain, on donne notre veste à la Boulangère en indiquant la marche à suivre pour trouver la monnaie : ouvrir la veste, chercher la poche de droite, récupérer le portefeuille, l'ouvrir et prendre la pièce d'un euro pour payer", au lieu de "Payer la boulangère".
+
+## Ne pas utiliser d'abrévation
+
+Il ne faut pas utiliser d'abrévation pour la lisibilité. Cependant, si on constate que les noms non abrégés de nos méthodes ou classes sont excessivement longs c'est sûrement parce qu'on ne respecte pas le principe SRP de SOLID...
+
+## Garder les modules ou les entités petites
+
+Les règles à respecter :
+- Maximum 10 méthodes par classe
+- Maximum 50 lignes par classe
+- Maximum 10 classes par namespace
 
 ## Pas plus de 5 variables d'instances (attributs ou propriétés)
 
-## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity)
+Il ne faut pas avoir plus de 5 variables d'instances pour une même classe ; cas signifiant que l'on a sûrement mal découpé et qu'on n'a pas respecté le principe SRP de SOLID...
 
-Lien approche "Tell don't ask"
+## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
+
+Ce point est très proche de la Loi de Demeter avec un seul point par ligne. Il ne peut être pas toujours possible d'interdire les Getter mais il faut toujours limiter voir interdire les Setter afin d'utiliser des méthodes dédiées pour ne pas désencapsuler l'objet.
