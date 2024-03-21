@@ -45,22 +45,39 @@ Il s'agit d'assurer un couplage faible entre le contrat d'utilisation d'un objet
 9 règles définissent les Object Calisthenics :
 1. Un seul niveau d'indentation par méthode
 2. Ne jamais utiliser le mot-clé "else" ou ses dérivés
-3. Garder les entités petites
-4. Ne pas utiliser d'abrévation
-5. Encapsuler les types primitifs dans des objets
-6. First Class Collection
-7. Un seul point par ligne (sauf écriture fluide)
+3. Encapsuler les types primitifs dans des objets
+4. First Class Collection
+5. Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
+6. Ne pas utiliser d'abrévation
+7. Garder les modules ou les entités petites
 8. Pas plus de 5 variables d'instances (attributs ou propriétés)
-9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity)
+9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
    
 ## Un seul niveau d'indentation par méthode
 
+Ce principe améliore la lisibilité et permet d'avoir un code découpé et maintenable.
+
 ## Ne jamais utiliser le mot-clé "else" ou ses dérivés
 
-Quelques solutions :
-- Early Exit
-- Fail fast
+Ce principe permet d'éviter les alternatives compliquées, tout en maintenant la lisibilité avec une code nominal explicite à la fin.
+Quelques solutions pour ne plus avoir de "else" :
+- Early Exit (cas métier ou respect des préconditions métier)
+- Fail fast (exceptionsliés aux prérequis selon respect des préconditions)
 - Initialisation en amont
+
+## Encapsuler les types primitifs dans des objets
+
+Il est toujours préférable d'utiliser un type personnalisé plutôt qu'une primitive trop ouverte.
+
+## First Class Collection
+
+Il est préférable d'utiliser une classe hôte pour héberger une collection plutôt que de la mélanger au milieu d'autres considérations métier d'un même objet.
+
+## Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
+
+Lien avec la Loi de Demeter
+
+## Ne pas utiliser d'abrévation
 
 ## Garder les entités petites
 
@@ -68,19 +85,9 @@ Les règles :
 - Maximum 10 méthodes par classe
 - Maximum 50 lignes par classe
 - Maximum 10 classes par namespace
-  
-## Ne pas utiliser d'abrévation
-
-## Encapsuler les types primitifs dans des objets
-
-## First Class Collection
-
-## Un seul point par ligne (sauf écriture fluide).
-
-Lien avec la Loi de Demeter ou "Tell don't ask"
 
 ## Pas plus de 5 variables d'instances (attributs ou propriétés)
 
-## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity)
+## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
 
 Lien approche "Tell don't ask"
