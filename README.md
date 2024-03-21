@@ -75,7 +75,8 @@ Il est préférable d'utiliser une classe hôte pour héberger une collection pl
 
 ## Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
 
-Lien avec la Loi de Demeter
+Il s'agit ici d'un lien avec la Loi de Demeter consistant à ne pas manipuler le contenu des objets ou désencapsuler depuis l'extérieur.
+L'image souvent donné lorsqu'on utilise plusieurs points par ligne : "Imaginons que pour payer le pain, on donne notre veste à la Boulangère en indiquant la marche à suivre pour trouver la monnaie : ouvrir la veste, chercher la poche de droite, récupérer le portefeuille, l'ouvrir et prendre la pièce d'un euro pour payer", au lieu de "Payer la boulangère".
 
 ## Ne pas utiliser d'abrévation
 
