@@ -63,7 +63,7 @@ Ce principe améliore la lisibilité et permet d'avoir un code découpé et main
 Ce principe permet d'éviter les alternatives compliquées, tout en maintenant la lisibilité avec une code nominal explicite à la fin.
 Quelques solutions pour ne plus avoir de "else" :
 - Early Exit (cas métier ou respect des préconditions métier)
-- Fail fast (exceptionsliés aux prérequis selon respect des préconditions)
+- Fail fast (exceptions liées aux prérequis selon respect des préconditions)
 - Initialisation en amont
 
 ## Encapsuler les types primitifs dans des objets
@@ -77,7 +77,7 @@ Il est préférable d'utiliser une classe hôte pour héberger une collection pl
 ## Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
 
 Il s'agit ici d'un lien avec la Loi de Demeter consistant à ne pas manipuler le contenu des objets ou désencapsuler depuis l'extérieur.
-L'image souvent donné lorsqu'on utilise plusieurs points par ligne : "Imaginons que pour payer le pain, on donne notre veste à la Boulangère en indiquant la marche à suivre pour trouver la monnaie : ouvrir la veste, chercher la poche de droite, récupérer le portefeuille, l'ouvrir et prendre la pièce d'un euro pour payer", au lieu de "Payer la boulangère".
+L'image souvent donnée lorsqu'on utilise plusieurs points par ligne : "Imaginons que pour payer le pain, on donne notre veste à la Boulangère en indiquant la marche à suivre pour trouver la monnaie : ouvrir la veste, chercher la poche de droite, récupérer le portefeuille, l'ouvrir et prendre la pièce d'un euro pour payer", au lieu de "Payer la boulangère".
 
 ## Ne pas utiliser d'abrévation
 
