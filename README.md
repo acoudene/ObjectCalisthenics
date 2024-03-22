@@ -27,7 +27,7 @@ Chaque module, chaque classe ou chaque structure ne doit avoir qu'une seule et u
 
 ## O-pen Closed Principle
 
-Tout code ou classe ne devrait jamais être modifiés pour une évolution (sauf bug), mais devrait être suffisamment ouverte aux évolutions futures. 
+Tout code ou classe ne devrait jamais être modifié(e) pour une évolution (sauf bug), mais devrait être suffisamment ouvert(e) aux évolutions futures. 
 
 ## L-iskov Substitution Principle
 
