@@ -6,8 +6,8 @@ public class GivenPrimitiveAsObjectPrinciple
   public void WhenUsingItThenItsAGoodPractice()
   {
     // Arrange
-    EmailType email = "anthony.coudene@gmail.com";
-    Action badAction = () => { EmailType email = "anthony"; };
+    var customer = new Customer("anthony.coudene@gmail.com");
+    Action badAction = () => { new Customer("anthony"); };
 
     // Act
 

@@ -8,11 +8,11 @@ public class GivenBadPrimitiveUsage
   public void WhenUsingItThenItsABadPractice()
   {
     // Arrange
-    string email = "anthony.coudene@gmail.com";
+    var customer = new Customer("anthony.coudene@gmail.com");
 
     // Act
     Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-    Match match = regex.Match(email);
+    Match match = regex.Match(customer.Email);
 
     // Assert
     Assert.True(match.Success);

@@ -1,3 +1,3 @@
 ﻿namespace NineCalisthenicRules._3_PrimitiveAsObject;
 
-public record Customer(string Email);
+public record Customer(EmailType Email);
