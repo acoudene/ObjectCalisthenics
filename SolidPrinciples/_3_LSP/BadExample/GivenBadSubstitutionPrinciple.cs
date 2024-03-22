@@ -6,7 +6,6 @@ public class GivenBadSubstitutionPrinciple
   public void WhenUsingItThenItsABadPractice()
   {
     // Arrange
-    var standardCustomer = new StandardCustomer();
     var premiumCustomer = new PremiumCustomer();
     var fidelityService = new FidelityService();
 

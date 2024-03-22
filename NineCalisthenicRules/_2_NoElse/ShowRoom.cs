@@ -6,25 +6,17 @@ public class ShowRoom
   public const string BestSeat = "Best seat";
   public const string StandardSeat = "Standard seat";
   public string AllocateSeat(Customer customer)
-  {
-    string allocatedSeat;
-
-    if (customer is null)
-    {
-      allocatedSeat = NoAllocatedSeat;
-    }
-    else
-    {
-      if (customer.Name.Equals("Nami"))
-      {
-        allocatedSeat = BestSeat;
-      }
-      else
-      {
-        allocatedSeat = StandardSeat;
-      }
+  {    
+    if (customer is null)      
+    { 
+      return NoAllocatedSeat;
     }
 
-    return allocatedSeat;
+    if (customer.Name.Equals("Nami"))
+    {
+      return BestSeat;
+    }
+      
+    return StandardSeat;      
   }
 }

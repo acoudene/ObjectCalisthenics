@@ -9,7 +9,7 @@ public class GivenLiskovSubstitutionPrinciple
     var standardCustomer = new StandardCustomer();
     var premiumCustomer = new PremiumCustomer();
     var fidelityService = new FidelityService();
-
+    
     // Act
     string bonusPoints = fidelityService.IncrementPoint(premiumCustomer);
     string proposal = fidelityService.ProposePremiumAccount(standardCustomer);
