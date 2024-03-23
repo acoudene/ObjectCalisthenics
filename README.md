@@ -16,6 +16,7 @@ Nous verrons les thématiques suivantes qui peuvent se recouper :
 - Object Calisthenics
 - Loi de Demeter
 - Approche "Tell don't ask"
+- Composition over Inheritance
 
 # Rappels SOLID
 
@@ -97,3 +98,27 @@ Il ne faut pas avoir plus de 2 variables d'instances pour une même classe ; cas
 ## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
 
 Ce point est très proche de la Loi de Demeter avec un seul point par ligne. Il ne peut être pas toujours possible d'interdire les Getter mais il faut toujours limiter voir interdire les Setter afin d'utiliser des méthodes dédiées pour ne pas désencapsuler l'objet.
+
+# Composition over Inheritance (sauf entité anémiée)
+
+Il s’agit ici d’éviter l’héritage au profit de la composition sans perdre le polymorphisme.
+
+Ce point doit être pondéré aux comportements d’un objet et non à la définition des caractéristiques d’un objet : comportements VS caractéristiques.
+
+En effet, le côté systématique de ce pattern est plus difficilement applicable à des caractéristiques ou du stockage de données via des entités dites anémiées (uniquement getter/setter) comme les DTOs, ViewObjects, Data Entities…
+
+Les éléments principaux et constitutifs de ce pattern :
+- Usage d’interfaces pour décrire le comportement à composer.
+- Autant de types d’implémentations que de comportements différents.
+- Usage d’IoC/DI (voir D de SOLID) pour injecter ces comportements.
+- Respect des principes de DRY (Don’t Repeat Yourself) assuré par l’injection de la même implémentation.
+
+Pourquoi utiliser ce pattern et pourquoi considérer que l’héritage tend à devenir un anti-pattern ? Voici mon point de expérience…
+
+En conception initiale d’un système de comportements hérité :
+- On va essayer de recouvrir tous les cas d’évolution possibles pour respecter le O de SOLID.
+- Over-engineering ou non respect des principes YAGNI (« You aren't gonna need it » ou on fait ce qu’on nous demande et pas plus). 
+- Non respect des principes KISS (« Keep It Simple Stupid! »). 
+
+En évolution de code, à moyen terme voire court terme, on va être obliger de casser le C de SOLID… Car humainement, il aura été impossible de tout anticiper, il faudra casser ou adapter les classes de base à un moment donné.
+
