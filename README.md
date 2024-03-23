@@ -51,7 +51,7 @@ Il s'agit d'assurer un couplage faible entre le contrat d'utilisation d'un objet
 5. Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
 6. Ne pas utiliser d'abrévation
 7. Garder les modules ou les entités petites
-8. Pas plus de 5 variables d'instances (attributs ou propriétés)
+8. Pas plus de 2 variables d'instances (attributs ou propriétés)
 9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
    
 ## Un seul niveau d'indentation par méthode
@@ -90,9 +90,9 @@ Les règles à respecter :
 - Maximum 50 lignes par classe
 - Maximum 10 classes par namespace
 
-## Pas plus de 5 variables d'instances (attributs ou propriétés)
+## Pas plus de 2 variables d'instances (attributs ou propriétés)
 
-Il ne faut pas avoir plus de 5 variables d'instances pour une même classe ; cas signifiant que l'on a sûrement mal découpé et qu'on n'a pas respecté le principe SRP de SOLID...
+Il ne faut pas avoir plus de 2 variables d'instances pour une même classe ; cas signifiant que l'on a sûrement mal découpé et qu'on n'a pas respecté le principe SRP de SOLID...
 
 ## Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
 
