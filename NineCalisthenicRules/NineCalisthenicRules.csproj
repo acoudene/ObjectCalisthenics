@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Folder Include="_7_SmallModules\BadExample\" />
-    <Folder Include="_8_FiveInstanceVariablesMax\BadExample\" />
+    <Folder Include="_8_TwoInstanceVariablesMax\BadExample\" />
   </ItemGroup>
 
 </Project>
