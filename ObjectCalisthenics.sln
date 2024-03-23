@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NineCalisthenicRules", "NineCalisthenicRules\NineCalisthenicRules.csproj", "{47B19C8B-5A92-494F-8DE3-C61D8D558694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NineCalisthenicRules", "NineCalisthenicRules\NineCalisthenicRules.csproj", "{47B19C8B-5A92-494F-8DE3-C61D8D558694}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidPrinciples", "SolidPrinciples\SolidPrinciples.csproj", "{33B05E01-6751-4281-BD35-C66543D58B49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidPrinciples", "SolidPrinciples\SolidPrinciples.csproj", "{33B05E01-6751-4281-BD35-C66543D58B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionOverInheritance", "CompositionOverInheritance\CompositionOverInheritance.csproj", "{C71C872A-EF8D-472D-8613-99AFF6706582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{33B05E01-6751-4281-BD35-C66543D58B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33B05E01-6751-4281-BD35-C66543D58B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33B05E01-6751-4281-BD35-C66543D58B49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71C872A-EF8D-472D-8613-99AFF6706582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71C872A-EF8D-472D-8613-99AFF6706582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71C872A-EF8D-472D-8613-99AFF6706582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71C872A-EF8D-472D-8613-99AFF6706582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
