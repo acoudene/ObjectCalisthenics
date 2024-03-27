@@ -113,12 +113,14 @@ Les éléments principaux et constitutifs de ce pattern :
 - Usage d’IoC/DI (voir D de SOLID) pour injecter ces comportements.
 - Respect des principes de DRY (Don’t Repeat Yourself) assuré par l’injection de la même implémentation.
 
-Pourquoi utiliser ce pattern et pourquoi considérer que l’héritage tend à devenir un anti-pattern ? Voici mon point de expérience…
+Pourquoi utiliser ce pattern et pourquoi considérer que l’héritage tend à devenir un anti-pattern ? Voici mon retour d'expérience…
 
 En conception initiale d’un système de comportements hérité :
 - On va essayer de recouvrir tous les cas d’évolution possibles pour respecter le O de SOLID.
-- Over-engineering ou non respect des principes YAGNI (« You aren't gonna need it » ou on fait ce qu’on nous demande et pas plus). 
-- Non respect des principes KISS (« Keep It Simple Stupid! »). 
+- On va faire de l'over-engineering
+- On ne va pas respecter les principes YAGNI (« You aren't gonna need it » ou on fait ce qu’on nous demande et pas plus). 
+- On ne va pas respecter les principes KISS (« Keep It Simple Stupid! »). 
 
-En évolution de code, à moyen terme voire court terme, on va être obliger de casser le C de SOLID… Car humainement, il aura été impossible de tout anticiper, il faudra casser ou adapter les classes de base à un moment donné.
+En évolution de code, à moyen terme voire court terme, on va être obliger de casser le C de SOLID… 
+En effet, humainement, il aura été impossible de tout anticiper, il faudra casser ou adapter les classes de base à un moment donné.
 
