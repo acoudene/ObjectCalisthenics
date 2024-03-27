@@ -2,13 +2,13 @@
 
 public class DeveloperActivity : IActivity
 {
-  public void AssignJiraTicket()
+  public void AssignTicket()
   {
     // Not ok!!!
     throw new NotImplementedException();
   }
 
-  public void CreateJiraTicket()
+  public void CreateTicket()
   {
     // Not ok!!!
     throw new NotImplementedException();

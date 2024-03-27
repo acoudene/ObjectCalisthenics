@@ -2,8 +2,8 @@
 
 public interface IManagerActivity
 {
-  void CreateJiraTicket();
-  void AssignJiraTicket();
+  void CreateTicket();
+  void AssignTicket();
 }
 
 

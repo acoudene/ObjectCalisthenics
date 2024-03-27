@@ -2,12 +2,12 @@
 
 public class TechLeadActivity : IDeveloperActivity, IManagerActivity
 {
-  public void AssignJiraTicket()
+  public void AssignTicket()
   {
     // Ok
   }
 
-  public void CreateJiraTicket()
+  public void CreateTicket()
   {
     // Ok
   }
