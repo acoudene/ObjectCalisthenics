@@ -7,15 +7,14 @@ public class ShowRoom
   public const string StandardSeat = "Standard seat";
   public string AllocateSeat(Customer customer)
   {    
-    if (customer is null)      
-    { 
+    if (customer is null)          
+      throw new ArgumentNullException(nameof(customer));
+    
+    if (customer.Name.Equals("Luffi"))
       return NoAllocatedSeat;
-    }
 
-    if (customer.Name.Equals("Nami"))
-    {
+    if (customer.Name.Equals("Nami"))    
       return BestSeat;
-    }
       
     return StandardSeat;      
   }

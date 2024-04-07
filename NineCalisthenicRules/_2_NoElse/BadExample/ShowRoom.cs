@@ -9,20 +9,27 @@ public class ShowRoom
   {
     string allocatedSeat;
 
-    if (customer is null)
+    if (customer is not null)
     {
-      allocatedSeat = NoAllocatedSeat;
-    }
-    else
-    {
-      if (customer.Name.Equals("Nami"))
+      if (customer.Name.Equals("Luffi"))
       {
-        allocatedSeat = BestSeat;
+        allocatedSeat = NoAllocatedSeat;
       }
       else
       {
-        allocatedSeat = StandardSeat;
+        if (customer.Name.Equals("Nami"))
+        {
+          allocatedSeat = BestSeat;
+        }
+        else
+        {
+          allocatedSeat = StandardSeat;
+        }
       }
+    }
+    else
+    {
+      throw new ArgumentNullException(nameof(customer));
     }
 
     return allocatedSeat;

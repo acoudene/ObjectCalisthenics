@@ -7,6 +7,7 @@ public class GivenPrimitiveAsObjectPrinciple
   {
     // Arrange
     var customer = new Customer("anthony.coudene@gmail.com");
+    var customer2 = new Customer(new EmailType("anthony.coudene@technidata-web.com"));
     Action badAction = () => { new Customer("anthony"); };
 
     // Act
