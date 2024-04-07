@@ -22,6 +22,7 @@ public class Architect : TeamMemberBase
   {
     // Don't use to test ;)
     // Break I from SOLID
+    throw new NotImplementedException();
   }
 
   // Added! Break C principle of SOLID  
