@@ -14,6 +14,8 @@ public class GivenSingleResponsibilityPrinciple
     
     // Act
     bool canBuyKatana = customer.CanBuy(priceOfKatana);
+    var logger = new TraceLogger();
+    logger.TraceConsoleDebug("Do something");
 
     // Assert
     Assert.True(canBuyKatana);

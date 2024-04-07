@@ -13,6 +13,7 @@ public class GivenBadResponsibility
     
     // Act
     bool canBuyKatana = customer.CanBuy(priceOfKatana);
+    customer.TraceConsoleDebug("Do something");
 
     // Assert
     Assert.True(canBuyKatana);
