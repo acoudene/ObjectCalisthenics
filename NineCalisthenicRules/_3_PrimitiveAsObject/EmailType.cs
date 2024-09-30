@@ -2,7 +2,7 @@
 
 namespace NineCalisthenicRules._3_PrimitiveAsObject;
 
-public readonly struct EmailType
+public readonly record struct EmailType
 {
   private readonly string _email;
   public EmailType(string email)
@@ -19,7 +19,7 @@ public readonly struct EmailType
     Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
     Match match = regex.Match(email);
 
-    if (!match.Success) throw new ArgumentException();
+    if (!match.Success) throw new ArgumentException(nameof(email));
   }
 
   public static implicit operator EmailType(string email) => new EmailType(email);
