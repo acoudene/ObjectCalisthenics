@@ -50,7 +50,7 @@ Il s'agit d'assurer un couplage faible entre le contrat d'utilisation d'un objet
 3. Encapsuler les types primitifs dans des objets
 4. First Class Collection
 5. Un seul point par ligne (sauf écriture fluide) ou Loi de Demeter
-6. Ne pas utiliser d'abrévation
+6. Ne pas utiliser d'abréviation
 7. Garder les modules ou les entités petites
 8. Pas plus de 2 variables d'instances (attributs ou propriétés)
 9. Aucun Getter/Setter ou pas de propriété (sauf DTO, VO, Entity) principe de "Tell don't ask"
@@ -80,9 +80,9 @@ Il est préférable d'utiliser une classe hôte pour héberger une collection pl
 Il s'agit ici d'un lien avec la Loi de Demeter consistant à ne pas manipuler le contenu des objets ou désencapsuler depuis l'extérieur.
 L'image souvent donnée lorsqu'on utilise plusieurs points par ligne : "Imaginons que pour payer le pain, on donne notre veste à la Boulangère en indiquant la marche à suivre pour trouver la monnaie : ouvrir la veste, chercher la poche de droite, récupérer le portefeuille, l'ouvrir et prendre la pièce d'un euro pour payer", au lieu de "Payer la boulangère".
 
-## Ne pas utiliser d'abrévation
+## Ne pas utiliser d'abréviation
 
-Il ne faut pas utiliser d'abrévation pour la lisibilité. Cependant, si on constate que les noms non abrégés de nos méthodes ou classes sont excessivement longs c'est sûrement parce qu'on ne respecte pas le principe SRP de SOLID...
+Il ne faut pas utiliser d'abréviation pour la lisibilité. Cependant, si on constate que les noms non abrégés de nos méthodes ou classes sont excessivement longs c'est sûrement parce qu'on ne respecte pas le principe SRP de SOLID...
 
 ## Garder les modules ou les entités petites
 
