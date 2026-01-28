@@ -1,4 +1,4 @@
-# Object Calisthenics
+# Software Craft
 
 A repository to expose Object Calisthenics, Law of Demeter (LoW), "Tell don't ask" (TDA) approaches.
 See code to illustrate rules below.
